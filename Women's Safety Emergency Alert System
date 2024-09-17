@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+void get_location() {
+                                                                                                        
+    
+    printf("Getting location...\n");
+    printf("Location: 12.3456, 78.9012\n");
+}
+
+
+void send_sms() {
+    printf("Sending SMS to 9889451522...\n"); 
+    printf("SMS sent successfully!\n"); 
+}
+
+
+void panic_button() {
+    printf("Emergency Alert!!\n");
+    printf("Sending your location and contact details to emergency number...\n");
+    get_location();  
+    send_sms();  
+}
+
+int main() {
+    int choice;
+    printf("Women Safety Analytics\n");
+    printf("1. Get Location\n");
+    printf("2. Send SMS\n");
+    printf("3. Panic Button (Emergency Alert)\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    switch (choice) {
+        case 1:
+            get_location();
+            break;
+        case 2:
+            send_sms();
+            break;
+        case 3:
+            panic_button();
+            break;
+        default:
+            printf("Invalid choice\n");
+            break;
+    }
+
+    return 0;
+}
+
